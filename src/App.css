@@ -1,16 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit:wght@300&display=swap');
+
 .App {
-  text-align: center;
+  display: flex;
+  background-color: #10141E;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2em;
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Body {
+  padding: 2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-section {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  padding: 1em;
+  background-color: #10141E;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.5em;
+  width: 50%;
 }
 
 .App-header {
@@ -21,18 +37,182 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.recommended-for-you {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav {
+  background-color: #161D2F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100px;
+  height: 75vh;
+  border-radius: 20px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.profile-avatar {
+  height: 3em;
+  width: 3em;
+}
+
+#main-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10em;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-left: .5em;
+  font-weight: 100
+}
+
+.Card {
+  display: inline-block;
+  width: 18em;
+  height: auto;
+  margin: 1em;
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.play-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 6.5rem;
+  height: 50px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 99;
+}
+
+.play-container:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 6.5rem;
+  height: 50px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 99;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card-image:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    min-height: 100vh;
+    padding: 2em;
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+  }
+
+  .trending-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .trending-images, .search-results {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .movie-images, .results, .search-result-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-result-images {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav {
+    background-color: #161D2F;
+    display: flex;
+    flex-direction: row;
+    height: 4em;
+    border-radius: 20px;
+    padding: 1em;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .input {
+    padding: 1em;
+    background-color: #10141E;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.4em;
+    width: 100%;
+  }
+
+  #main-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10em;
+    height: 100%;
+  }
+
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+
+  #profile-avatar {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .input {
+    padding: 1em;
+    background-color: #10141E;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    width: 100%;
   }
 }
